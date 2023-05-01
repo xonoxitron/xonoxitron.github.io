@@ -1,3 +1,0 @@
-Sitemap: https://matteopisani.com/sitemap.xml
-User-Agent: *
-Allow: /
