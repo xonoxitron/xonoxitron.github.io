@@ -12,6 +12,7 @@
         content="Hacking, Reverse Engineering, Cybersecurity, Vulnerability Assessment, Penetration Testing, Cryptography">
 
     <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <script src="./hyperspace.js"></script>
 
     <style>
         * {
@@ -28,10 +29,10 @@
         }
 
         html,
-        body {
+        body,
+        #hyperspace {
             height: 100%;
             width: 100%;
-            position: fixed;
         }
 
         h1,
@@ -142,6 +143,7 @@
         <pre
             class="links"><a class="glitch" href="https://github.com/xonoxitron/" target="_blank">GitHub</a>   <a class="glitch" href="https://www.linkedin.com/in/matteopisani" target="_blank">LinkedIn</a>   <a class="glitch" href="https://medium.com/@matteo.pisani.91" target="_blank">Medium</a>   <a class="glitch" href="https://twitter.com/MatteoPisani91" target="_blank">Twitter</a></pre>
     </div>
+    <canvas id="hyperspace"></canvas>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKPH8VS0ZW"></script>
@@ -155,7 +157,11 @@
             setTimeout(() => {
                 PowerGlitch.glitch('.glitch', { playMode: 'hover' })
             }, 1500)
+
+            let canvas = document.querySelector('#hyperspace');
+            new Hyperspace(canvas, 250, 5);
         }
+
     </script>
 
 </body>
