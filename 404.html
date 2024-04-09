@@ -11,7 +11,8 @@
     <meta name="keywords"
         content="Hacking, Reverse Engineering, Cybersecurity, Vulnerability Assessment, Penetration Testing, Cryptography">
 
-    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <script src="./powerglitch.min.js"></script>
+    <script src="./hyperspace.min.js"></script>
 
     <style>
         * {
@@ -108,6 +109,7 @@
 
         <pre class="links glitch"><a href="https://matteopisani.com" >Home</a></pre>
     </div>
+    <canvas id="hyperspace"></canvas>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JKPH8VS0ZW"></script>
@@ -121,6 +123,9 @@
             setTimeout(() => {
                 PowerGlitch.glitch('.glitch', { playMode: 'hover' })
             }, 1500)
+
+            let canvas = document.querySelector('#hyperspace');
+            new Hyperspace(canvas, 250, 5);
         }
     </script>
 
