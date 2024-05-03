@@ -139,6 +139,16 @@
 
         <pre
             class="links"><a href="https://github.com/xonoxitron/" target="_blank">GitHub</a>   <a href="https://www.linkedin.com/in/matteopisani" target="_blank">LinkedIn</a>   <a href="https://medium.com/@matteo.pisani.91" target="_blank">Medium</a>   <a href="https://twitter.com/MatteoPisani91" target="_blank">Twitter</a></pre>
+
+        <br>
+        <br>
+        <br>
+
+        <pre id="easteregg" style="cursor:pointer;">
+<b> </b> <b>■</b> <b> </b>
+<b> </b> <b> </b> <b>■</b>
+<b>■</b> <b>■</b> <b>■</b>
+</pre>
     </div>
     <canvas id="hyperspace"></canvas>
 
@@ -157,7 +167,13 @@
             new Hyperspace(hyperspace, 500, 10);
         });
 
+        easteregg.onclick = () => {
+            document.querySelector("body > audio").play();
+        }
+
     </script>
+
+    <audio id="audioplayer" src="/paradox.mp3" autoplay></audio>
 
 </body>
 
