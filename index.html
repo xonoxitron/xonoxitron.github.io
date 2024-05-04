@@ -179,9 +179,10 @@
         }
 
         setInterval(() => {
-            const randomizedColors = Array.from(document.querySelectorAll('pre.ascii b'), b => b.style.color).sort(() => Math.random() - 0.5).slice(0, 5);
-            Array.from(document.querySelectorAll('#easteregg b[id^="g"]')).forEach((b, i) => b.style.color = randomizedColors[i]);
-        }, 100)
+            const palette = ["#FFFFFF", "#F8F9FA", "#E9ECEF", "#DEE2E6", "#CED4DA", "#ADB5BD", "#6C757D", "#495057"].sort(() => Math.random() - 0.5).slice(0, 5);
+            Array.from(document.querySelectorAll('#easteregg b[id^="g"]')).forEach((b, i) => b.style.color = palette[i]);
+
+        }, 64)
     </script>
 
 </body>
